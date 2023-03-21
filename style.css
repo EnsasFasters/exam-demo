@@ -1,0 +1,173 @@
+	@media screen {
+
+   :root {
+   --bg      : #d8d6d4;
+   --deep    : #1f877d;
+   --beach   : #23b2a7;
+   --fire    : #e05e20;
+   --deeper  : #105a52;
+  }
+	body{
+		width:100vw;
+    margin: 0;
+		background-color: var(--bg);
+		font-family: 'Genos', sans-serif;
+		overflow-x: hidden;
+		user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+	}
+
+	header{
+		width: 100vw;
+		height: 70px;
+		background :var(--beach);
+		border-bottom: 1px solid black;
+		font-weight: bold;
+		display: flex;
+		justify-content: space-between;
+	}
+	header > *{
+		font-size: 20px;
+		margin: 0 10px;
+	}
+	header  p{
+		margin: 0;
+		text-align: center;
+	}
+	.flex-column{
+		display:flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+
+  
+/**********MAIN***********/
+            main {
+            	top: 100px;
+            	display: block;
+            	width: 100vw;
+            	text-align: center;
+            	font-size: 20px;
+            	font-weight: bold;
+            	width: calc(100vw - 60px);
+            	margin: auto 30px;
+            }
+           main p{
+           	  background :var(--beach);
+           		border: 1px solid black;
+           		padding: 30px;
+           		border-radius: 10px;
+           	}
+          	main > div{
+           		display: flex;
+               flex-direction: column;
+             		gap:20px;
+           	}
+           	main div div{
+           	  background :var(--beach);
+           		padding: 10px;
+           		border: 1px solid black;
+           		border-radius: 10px;
+           	}
+           	main div div:hover{
+           		animation: vibrate .2s infinite;
+           		color: white;
+           		text-shadow: 0 0 9px black;
+           		cursor: pointer;
+           		font-weight: bold;
+           		box-shadow: 0px 0px 5px white, 0px 0px 5px white;
+           	}
+         
+/**********FOOTER**************/
+footer {
+	background: var(--deep);
+	display: flex;
+	font-size: 20px;
+	font-weight: bolder;
+	justify-content: space-between;
+	border: 2px solid black;
+	width: 100vw;
+	position: fixed;
+	bottom: 0;
+}
+footer > div:nth-child(2) {
+    position: relative;
+    margin-right: 10px;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+ }
+
+footer > div >i{
+margin: 10px;
+}
+footer > div {
+    margin: 0px 0;
+    padding: 0;
+}
+footer > div > p{
+	margin: 0;
+	text-align: center;
+}
+
+#team-name{
+	text-decoration:none;
+	color: var(--fire);
+	text-shadow: 0 0 5px black;
+}
+ /*******footer-arrow***********/
+         footer > div > i{ 
+             font-size: 25px;
+             transition: color .2s;
+          }
+          footer > div > i:hover{ 
+             color: white;
+             cursor: pointer;
+      }
+          
+     /*******bottom-bar-developed-by*********/
+      
+
+  	@keyframes vibrate{
+  		0%{transform: rotateZ(0deg);}
+      25%{transform: rotateZ(0.2deg);}
+      50%{transform: rotateZ(0deg);}
+      75%{transform: rotateZ(-0.2deg);}
+     100%{transform: rotateZ(0deg);}  
+  	}
+
+@media(max-width: 768px){
+	
+}
+
+@media(min-width: 768px) and (max-width: 1200px){
+
+}
+
+@media(min-width: 1200px){
+
+}
+
+  /********Scroll Bar********************/
+   /* width */
+   ::-webkit-scrollbar {
+     width: 5px;
+   }
+   
+   /* Track */
+   ::-webkit-scrollbar-track {
+     background: var(--bg);
+   }
+   
+   /* Handle */
+   ::-webkit-scrollbar-thumb {
+     background: var(--deep);
+   }
+   
+   /* Handle on hover */
+   ::-webkit-scrollbar-thumb:hover {
+     background: var(--fire);
+   }
+   }
+}
